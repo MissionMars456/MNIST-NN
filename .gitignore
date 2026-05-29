@@ -1,0 +1,8 @@
+#Don't upload virtual environment
+.venv/
+# Don't upload python cache
+__pycache__/ 
+#Don't upload any python cache stuff
+*.pyc
+*.pyo
+*.pyd
