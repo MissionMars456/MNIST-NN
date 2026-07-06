@@ -9,6 +9,9 @@ def showImage(i):
     plt.tick_params(which='both', bottom=False, left=False, labelbottom=False, labelleft=False)
     plt.colorbar()
     plt.title(f"Target: {train_labels[i]}")
+    plt.figtext(0.5, 0.07, f"Prediction {i}", 
+                ha="center")
+
     plt.show()
 
 showImage(0)
