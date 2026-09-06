@@ -38,7 +38,6 @@ def write():
 def read():
     global hidden1Weights, hidden2Weights, outputWeights
     global hidden1Biases, hidden2Biases, outputBiases
-    global inputVals, hidden1Vals, hidden2Vals, outputVals
 
     loadedMatrixValues = np.load("MatrixValues.npz")
 

@@ -1,5 +1,5 @@
-import tensorflow as tf
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 (train_images, train_labels), _ = tf.keras.datasets.mnist.load_data()
 train_images = train_images / 255

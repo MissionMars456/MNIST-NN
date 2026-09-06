@@ -1,5 +1,5 @@
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
 
 # Get Data
 (train_images, train_labels), _ = tf.keras.datasets.mnist.load_data()

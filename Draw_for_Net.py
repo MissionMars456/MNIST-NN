@@ -1,6 +1,8 @@
 import tkinter as tk
+
 import numpy as np
 from scipy.ndimage import center_of_mass, shift
+
 import Neural_Net as nn
 
 root = tk.Tk()
@@ -23,7 +25,6 @@ last_brushed_cell = None
 
 def create_board():
     """Initializes or resets the board tiles to pure black."""
-    global grid_items, grid_values
     
     canvas.delete("all")
     grid_items.clear()
@@ -106,8 +107,8 @@ def process_and_predict():
         confidence = float(np.max(prediction_matrix)) * 100
         
         prediction_label.config(text=f"Prediction: {predicted_digit} ({confidence:.1f}%)")
-    except Exception as e:
-        prediction_label.config(text=f"Network Error: {str(e)}")
+    except (ConnectionError, TimeoutError) as e:
+        prediction_label.config(text=f"Network Error: {e!s}")   
 
 def reset_drag_tracking(event):
     global last_brushed_cell

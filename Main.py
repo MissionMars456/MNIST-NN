@@ -1,9 +1,9 @@
+import os
+
 import numpy as np
 from tensorflow.keras.datasets import mnist
-import Neural_Net as nn
 
-import os
-import time
+import Neural_Net as nn
 
 np.set_printoptions(suppress=True)
 
